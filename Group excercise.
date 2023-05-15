@@ -1,0 +1,36 @@
+largestSoFar = 2
+print("Smallest number is", largestSoFar)
+for the_num in [2,6,3,9,41,67,8] :
+    if the_num > largestSoFar:
+         largestSoFar=the_num
+    print(largestSoFar, the_num)   
+print("Largest number is", largestSoFar)
+
+
+
+
+
+
+
+def is_prime(num):
+    if num < 2:
+        return  False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def print_prime_numbers(n):
+    prime_numbers = []
+    for num in range(n + 1):
+        if is_prime(num):
+            prime_numbers.append(num)
+    print("Prime numbers from 0 to", n, ":")
+    print(prime_numbers)
+
+
+n = int(input("enter the value of n:"))
+print_prime_numbers(n)
+
+
+
